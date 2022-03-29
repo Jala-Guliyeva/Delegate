@@ -29,7 +29,7 @@ namespace Delegate.Models
             {
                 if (item == medicine)
                 {
-                    throw new MedicineAlreadyExistsException("Movcuddur");
+                    throw new MedicineAlreadyExistsException("Movcuddur!");
                     return;
                 }
             }
@@ -62,7 +62,7 @@ namespace Delegate.Models
             Medicine medicine = _medicines.Find(m => m.Id == id);
             if (medicine == null)
             {
-                throw new NotFoundException("Yoxdur.");
+                throw new NotFoundException("Bele birsey Yoxdur!");
 
             }
             return medicine;
@@ -74,7 +74,7 @@ namespace Delegate.Models
 
             Medicine medicine = _medicines.Find(m => m.Id == id);
             if (medicine == null)
-                throw new NotFoundException("bele derman yoxdur");
+                throw new NotFoundException("bele derman yoxdur!");
             //else
             //{
             //    medicine.IsDeleted = true;
@@ -91,7 +91,7 @@ namespace Delegate.Models
             }
             Medicine medicine = _medicines.Find(m => m.Name == name && m.IsDeleted == false);
             if (medicine == null)
-                throw new NotFoundException("bele bir sey yoxdur");
+                throw new NotFoundException("bele bir sey yoxdur!");
             medicine.Name = name;
         }
     }
