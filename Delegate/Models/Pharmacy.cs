@@ -75,10 +75,8 @@ namespace Delegate.Models
             Medicine medicine = _medicines.Find(m => m.Id == id && m.IsDeleted);
             if (medicine == null)
                 throw new NotFoundException("bele derman yoxdur!");
-            else
-            {
-                medicine.IsDeleted = true;
-            }
+             medicine.IsDeleted = true;
+          
            
          
         }

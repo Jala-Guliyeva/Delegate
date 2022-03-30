@@ -23,7 +23,7 @@ namespace Delegate.Models
         }
         public  void ShowInfo()
         {
-            Console.WriteLine($"Id:{Id} - Name:{Name} - Price:{Price} - Count:{Count} ");
+            Console.WriteLine($"Id:{Id} - Name:{Name} - Price:{Price} - Count:{Count} -Isdeleted:{IsDeleted}");
         }
         public void Sell()
         {
