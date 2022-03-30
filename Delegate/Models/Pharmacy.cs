@@ -19,7 +19,7 @@ namespace Delegate.Models
         public void AddMedicine(Medicine medicine)
         {
 
-            if (_medicines.Count > MedicineLimit)
+            if (_medicines.Count < MedicineLimit)
             {
                 throw new CapacityLimitException("Limit doldu!");
                 return;
