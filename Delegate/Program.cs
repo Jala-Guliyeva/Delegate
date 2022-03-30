@@ -40,6 +40,7 @@ namespace Delegate
             {
                 item.ShowInfo();
             }
+            
         }
 
     }

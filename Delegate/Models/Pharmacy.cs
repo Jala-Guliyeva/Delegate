@@ -79,7 +79,7 @@ namespace Delegate.Models
             {
                 medicine.IsDeleted = true;
             }
-            _medicines.Remove(medicine);
+            _medicines.IsDeleted(medicine);
          
         }
         public void EditMedicineEmail(int? id, string name)
