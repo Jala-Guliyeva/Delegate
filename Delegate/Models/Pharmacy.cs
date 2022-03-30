@@ -87,7 +87,7 @@ namespace Delegate.Models
                 throw new NullReferenceException("id ve name null olmamalidi!");
                 return;
             }
-            Medicine medicine = _medicines.Find(m => m.Name == name && m.IsDeleted == false);
+            Medicine medicine = _medicines.Find(m => m.Name == name && m.IsDeleted);
             if (medicine == null)
                 throw new NotFoundException("bele bir sey yoxdur!");
             medicine.Name = name;
