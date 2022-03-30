@@ -11,7 +11,7 @@ namespace Delegate.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public int Count { get; set; }
-        public bool IsDeleted { get; set; }
+        public bool IsDeleted { get; set; } = false;
         public Medicine( string name, double price,int count)
         {
             _id++;
