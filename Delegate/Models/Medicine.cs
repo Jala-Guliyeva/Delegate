@@ -11,7 +11,7 @@ namespace Delegate.Models
         public string Name { get; set; }
         public double Price { get; set; }
         public int Count { get; set; }
-        public bool IsDeleted { get; set; } = false;
+        public bool IsDeleted { get; set; } 
         public Medicine( string name, double price,int count)
         {
             _id++;
@@ -25,7 +25,7 @@ namespace Delegate.Models
         {
             Console.WriteLine($"Id:{Id} - Name:{Name} - Price:{Price} - Count:{Count} ");
         }
-        public void sell()
+        public void Sell()
         {
             Count--;
         }

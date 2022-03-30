@@ -72,14 +72,14 @@ namespace Delegate.Models
             if (id == null)
                 throw new NullReferenceException("id null olmamalidi!");
 
-            Medicine medicine = _medicines.Find(m => m.Id == id);
+            Medicine medicine = _medicines.Find(m => m.Id == id && m.IsDeleted);
             if (medicine == null)
                 throw new NotFoundException("bele derman yoxdur!");
             else
             {
                 medicine.IsDeleted = true;
             }
-            _medicines.IsDeleted(medicine);
+           
          
         }
         public void EditMedicineEmail(int? id, string name)
