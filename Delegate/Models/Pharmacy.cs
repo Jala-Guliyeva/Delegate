@@ -19,7 +19,7 @@ namespace Delegate.Models
         public void AddMedicine(Medicine medicine)
         {
 
-            if (_medicines.Count < MedicineLimit)
+            if (_medicines.Count > MedicineLimit)
             {
                 throw new CapacityLimitException("Limit doldu!");
                 return;
@@ -79,7 +79,7 @@ namespace Delegate.Models
             {
                 medicine.IsDeleted = true;
             }
-            _medicines.IsDeleted(medicine);
+            _medicines.Remove(medicine);
          
         }
         public void EditMedicineEmail(int? id, string name)
